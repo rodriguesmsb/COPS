@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/sytle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <title>COPS</title>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <header>
+           
+        </header>
+
+        <form action="/" method="POST", class = "form_layout">
+            
+            <h1 class = "title_header">The Covid Prognostic Score</h1>
+
+            <h2 class = "subtitle_header">Please enter your patient charactetistics</h2>
+        
+
+            <label for="age" class = "age_label">Select your pacient Age (years):</label>
+            <input type="range" name="age" id = "age_range" class = "age_input" min = "0" max = "120" step="0.1">
+            <p class = "age_value">Selected value: <output id="age_value"></output></p>
+            <script>
+                var slider = document.getElementById("age_range");
+                var output = document.getElementById("age_value");
+                output.innerHTML = slider.value;
+                
+                slider.oninput = function() {
+                  output.innerHTML = this.value;
+                }
+                </script>
+
+            
+            <label for="ars" class = "ars_label">Ambient air saturation (%):</label>
+            <input type="range" name="ars" id = "ars_range" class = "ars_input" min = "0" max = "100" step="0.01">
+            <p class = "ars_value">Selected value: <output id="ars_value"></output></p>
+            <script>
+                var slider_ars= document.getElementById("ars_range");
+                var output_ars = document.getElementById("ars_value");
+                output_ars.innerHTML = slider_ars.value;
+                
+                slider_ars.oninput = function() {
+                  output_ars.innerHTML = this.value;
+                }
+            </script>
+
+            
+            <label for="Leukocyte" class = "Leukocyte">Leukocyte count (cells/mm³):</label>
+            <input type="number" name="Leukocyte" id = "Leukocyte_input" class = "Leukocyte_input" placeholder="Type your value" min = 0 max = 500,000 step="0.01" value = 0>
+
+            <label for="urea" class = "urea_label">Urea level (mg/dL):</label>
+            <input type="number" name="urea" id = "urea_input" class = "urea_input" placeholder="Type your value" min = 0 max = 500 step="0.01" value = 0>
+
+            <label for="lactate" class = "lactate_label">Highest lactate in 24 hours (mmol/L) :</label>
+            <input type="number" name="lactate" id = "lactate" class = "lactate_input" placeholder="Type your value" min = 0 max = 10 step="0.01" value = 0>
+
+            <label for="creactive" class = "creactive_label">C-reactive proetin (mg/dL) :</label>
+            <input type="number" name="creactive" id = "creactive" class = "creactive_input" placeholder="Type your value" min = 0 max = 500 step="0.01" value = 0>
+
+            <label for="ddimer" class = "ddimer_label">D-dimer level (ng/mL) :</label>
+            <input type="number" name="ddimer" id = "ddimer" class = "ddimer_input" placeholder="Type your value" min = 0 max = 5000 step="1" value = 0>
+
+            
+          
+
+
+            <input class= "submit_button" type = "submit" value = "Submit">
+                
+        
+
+        </form>
+
+
+</body>
+
+</html>
