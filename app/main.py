@@ -4,6 +4,7 @@ from flask import render_template
 from flask import jsonify
 import app.model as app_functions
 import pandas as pd
+import sklearn
 
 
 app = Flask(__name__)
