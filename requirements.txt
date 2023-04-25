@@ -15,4 +15,4 @@ six
 threadpoolctl
 Werkzeug
 zipp
-scikit-learn==1.2.1
+scikit-learn==1.0.2
