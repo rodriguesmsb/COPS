@@ -1,7 +1,6 @@
 import pandas as pd
 import joblib
-import sklearn
-from sklearn.ensemble import RandomForestClassifier
+
 
 def prediction_prob(data):
 
